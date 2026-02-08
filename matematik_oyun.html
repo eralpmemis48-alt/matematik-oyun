@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Matematik Zekâ Parkuru</title>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 15px;
+  margin: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#kutu {
+  background: white;
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎯 Matematik Zekâ Parkuru</h1>
+<p>7. Sınıf – Orta / Zor</p>
+
+<div id="kutu">
+  <p id="soru">Başlamak için butona bas</p>
+  <button onclick="cevapGoster()">Cevabı Göster</button>
+  <p id="cevap"></p>
+</div>
+
+<button onclick="sonrakiSoru()">Sonraki Soru</button>
+
+<script>
+let sorular = [
+  ["240 sayısının %15’i kaçtır?", "36"],
+  ["-12 + 5 × 3 işleminin sonucu kaçtır?", "3"],
+  ["2x - 3 ifadesinde x = 5 ise sonuç kaçtır?", "7"],
+  ["4x + 6 = 18 denkleminde x kaçtır?", "3"],
+  ["Bir üçgenin iç açılar toplamı kaç derecedir?", "180"],
+  ["50° ve 60° olan iki açısı verilen üçgenin üçüncü açısı kaçtır?", "70"],
+  ["3/4 - 1/2 işleminin sonucu nedir?", "1/4"],
+  ["12 kız, 8 erkek olan sınıfta kızların oranı nedir?", "3/5"],
+  ["4 işçi bir işi 6 günde yaparsa 8 işçi kaç günde yapar?", "3"],
+  ["x/3 = 2x/9 denklemini sağlayan x değeri nedir?", "0"]
+];
+
+let sira = 0;
+
+function sonrakiSoru() {
+  document.getElementById("soru").innerHTML = sorular[sira][0];
+  document.getElementById("cevap").innerHTML = "";
+  sira++;
+  if (sira >= sorular.length) {
+    sira = 0;
+  }
+}
+
+function cevapGoster() {
+  document.getElementById("cevap").innerHTML = "Cevap: " + sorular[sira-1][1];
+}
+</script>
+
+</body>
+</html>
+  <p style="text-align:center; margin-top:20px; font-family:Arial; color:black;">
+  By Eralp
+</p>
+
